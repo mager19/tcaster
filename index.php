@@ -54,6 +54,7 @@ get_header(); ?>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque ipsa est reiciendis, 
 							animi quia cum quibusdam saepe fugiat quo quos similique rem autem consequuntur magnam assumenda voluptatum incidunt sed molestias.</p>
 							<h2><?php the_title(); ?></h2>
+							<input type="password" name=""/>
 							
 						</div>
 					<?php endwhile; ?>
