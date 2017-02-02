@@ -47,14 +47,14 @@ get_header(); ?>
 					<?php 
 					if( have_posts() ) : while( have_posts() ) : the_post(); ?>
 						<div class="posts__item">
-							<div class="posts__item__titulo" style="background-image: url(<?php the_post_thumbnail_url(); ?>);">
-								<?php the_title(); ?>
+							<div class="posts__item__titulo" style="background-image: url(<?php the_post_thumbnail_url('imagen-post'); ?>);">
+								<h3><?php the_title(); ?></h3>								
 							</div>
-							<p><?php the_content(); ?></p>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque ipsa est reiciendis, 
-							animi quia cum quibusdam saepe fugiat quo quos similique rem autem consequuntur magnam assumenda voluptatum incidunt sed molestias.</p>
-							<h2><?php the_title(); ?></h2>
-							<input type="password" name=""/>
+							<div class="posts__item__contenido">
+								<h4><?php the_date( 'd M Y', '<span> ',  '</span> /' ); ?> <?php the_category( ', ' ); ?> </h4>
+								<p><?php the_excerpt(); ?></p>
+								<a class="more" href="<?php the_permalink(); ?>">Leer mas.</a>
+							</div>
 							
 						</div>
 					<?php endwhile; ?>

@@ -42,6 +42,8 @@ function tcaster_setup() {
 	 */
 	add_theme_support( 'post-thumbnails' );
 
+	add_image_size( 'imagen-post', 1280, 400, true );
+
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'principal' => esc_html__( 'principal', 'tcaster' ),

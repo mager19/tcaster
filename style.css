@@ -939,8 +939,7 @@ object {
 .navbar-nav{
 	font-size: 1.1em;
     letter-spacing: 1px;
-    margin-top: 0.8em;
-}
+   }
 
 .navbar-nav a{
 	color:#fff;	
@@ -965,7 +964,42 @@ object {
     background-color: #888;
 }
 
-.posts__item__titulo{
-	background-size: cover;
-	padding: 3em 0;
+.posts__item{
+	padding-bottom: 5em;
 }
+
+.posts__item__titulo{
+	background-size:cover;
+	height: 40vh;
+}
+
+.posts__item__titulo h3{
+	background-color: rgba(255,255,255,0.7);
+	border:10px solid #fff;
+	font-weight: bold;
+	left: 20%;
+	padding: 2.5em 0.5em;
+	height: 20vh;
+	position: relative;
+	text-align: center;
+	top:25%;
+	width: 60%;
+}
+
+.posts__item__contenido h4{
+	color:#30A9DE;
+	font-size: 1.4em;
+	padding: 1em 0 0 0;
+}
+
+.posts__item__contenido p{
+	font-size: 1.3em;
+	margin-bottom: 2em;
+}
+
+.posts__item__contenido .more{
+	border-bottom:2px solid #30A9DE;
+	padding: 0.2em 1em;
+	margin-top: 1em;
+}
+
