@@ -51,7 +51,9 @@ get_header(); ?>
 								<?php the_title(); ?>
 							</div>
 							<p><?php the_content(); ?></p>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque ipsa est reiciendis, animi quia cum quibusdam saepe fugiat quo quos similique rem autem consequuntur magnam assumenda voluptatum incidunt sed molestias.</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque ipsa est reiciendis, 
+							animi quia cum quibusdam saepe fugiat quo quos similique rem autem consequuntur magnam assumenda voluptatum incidunt sed molestias.</p>
+							<h2><?php the_title(); ?></h2>
 							
 						</div>
 					<?php endwhile; ?>
