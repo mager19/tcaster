@@ -24,12 +24,7 @@ get_header(); ?>
 				<!--Social-->
 				<div class="col-md-3">
 					<div class="menu__social">
-						<ul>
-							<li><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/twitter.png" alt="twitter"></a></li>
-							<li><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/facebook.png" alt=""></a></li>
-							<li><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/instagram.png" alt=""></a></li>
-							<li><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/rss.png" alt=""></a></li>
-						</ul>
+						<?php get_template_part('template-parts/nav','social') ?>
 					</div>
 				</div>
 				<!--/Social-->

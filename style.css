@@ -933,6 +933,10 @@ object {
 	padding-top: 1em;
 }
 
+.menu__social ul{
+	margin-left: -2em;
+}
+
 .menu__social ul li{
 	display: inline-block;
 	list-style: none;
@@ -1007,3 +1011,13 @@ object {
 	margin-top: 1em;
 }
 
+.footer{
+	background-color:#232323;
+	color:#fff;
+	padding: 3em 0;
+	text-align: center;
+}
+
+.footer a{
+	color:#fff;
+}
