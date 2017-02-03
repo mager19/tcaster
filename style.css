@@ -971,7 +971,7 @@ object {
     background-color: #888;
 }
 
-.posts__item{
+.posts__item, .posts__item--secundarios{
 	padding-bottom: 5em;
 }
 
@@ -980,17 +980,32 @@ object {
 	height: 40vh;
 }
 
+.posts__item__titulo--secundarios{
+	background-size:cover;
+	border:1px solid #fff;
+	height: 25vh;
+}
+
 .posts__item__titulo h3{
-	background-color: rgba(255,255,255,0.7);
-	border:10px solid #fff;
+	background-color: rgba(255,255,255,0.8);
 	font-weight: bold;
-	left: 20%;
-	padding: 2em 0.5em;
-	height: 20vh;
+	left: 5%;
+	padding: 1em;	
+	position: relative;
+	top:70%;
+	width: 80%;
+}
+
+.posts__item__titulo--secundarios h3{
+	background-color: rgba(255,255,255,0.8);
+	font-size: 1em;
+	font-weight: 200;
+	left: 3%;
+	padding: 3em 1em;	
 	position: relative;
 	text-align: center;
-	top:25%;
-	width: 60%;
+	top:20%;
+	width: 94%;
 }
 
 .posts__item__contenido h4{
@@ -1010,6 +1025,14 @@ object {
 	padding: 0.2em 1em;
 	margin-top: 1em;
 }
+
+.banner{
+	background-color: #232323;
+	color:#fff;
+	padding: 5em 0;
+	text-align: center;
+}
+
 
 .footer{
 	background-color:#232323;
