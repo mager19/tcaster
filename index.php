@@ -25,10 +25,10 @@ get_header(); ?>
 				<div class="col-md-3">
 					<div class="menu__social">
 						<ul>
-							<li><a href="#"><img src="https://placeholdit.imgix.net/~text?txtsize=6&txt=50%C3%9750&w=20&h=20" alt=""></a></li>
-							<li><a href="#"><img src="https://placeholdit.imgix.net/~text?txtsize=6&txt=50%C3%9750&w=20&h=20" alt=""></a></li>
-							<li><a href="#"><img src="https://placeholdit.imgix.net/~text?txtsize=6&txt=50%C3%9750&w=20&h=20" alt=""></a></li>
-							<li><a href="#"><img src="https://placeholdit.imgix.net/~text?txtsize=6&txt=50%C3%9750&w=20&h=20" alt=""></a></li>
+							<li><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/twitter.png" alt="twitter"></a></li>
+							<li><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/facebook.png" alt=""></a></li>
+							<li><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/instagram.png" alt=""></a></li>
+							<li><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/rss.png" alt=""></a></li>
 						</ul>
 					</div>
 				</div>
@@ -53,7 +53,11 @@ get_header(); ?>
 							<div class="posts__item__contenido">
 								<h4><?php the_date( 'd M Y', '<span> ',  '</span> /' ); ?> <?php the_category( ', ' ); ?> </h4>
 								<p><?php the_excerpt(); ?></p>
-								<a class="more" href="<?php the_permalink(); ?>">Leer mas.</a>
+								<div class="row">
+									<div class="col-md-12">
+										<a class="more pull-right" href="<?php the_permalink(); ?>">Leer mas.</a>
+									</div>
+								</div>
 							</div>
 							
 						</div>

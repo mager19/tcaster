@@ -18,6 +18,9 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
+
+Icons usados:
+Socials: http://www.flaticon.com/packs/social-media-logo-collection
 */
 
 /*--------------------------------------------------------------
@@ -978,7 +981,7 @@ object {
 	border:10px solid #fff;
 	font-weight: bold;
 	left: 20%;
-	padding: 2.5em 0.5em;
+	padding: 2em 0.5em;
 	height: 20vh;
 	position: relative;
 	text-align: center;
@@ -999,6 +1002,7 @@ object {
 
 .posts__item__contenido .more{
 	border-bottom:2px solid #30A9DE;
+	font-size: 1.2em;
 	padding: 0.2em 1em;
 	margin-top: 1em;
 }
