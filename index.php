@@ -86,13 +86,19 @@ get_header(); ?>
 		
 		<!-- Banner -->
 		<aside class="banner">
-			<div class="row">
-				<div class="col-md-12">
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, quis odio itaque temporibus distinctio perspiciatis corrupti maxime. Alias sint, magnam dolor molestiae sapiente eos non nesciunt excepturi, numquam, quibusdam enim!			
+			<div class="container">
+				<div class="row">
+					<div class="col-md-5">
+						<h3><?php bloginfo('name'); ?></h3>
+						<p><?php bloginfo('description'); ?></p>
+					</div>
+					<div class="col-md-7">
+						<h4>Todos los Episodios.</h4>
+					</div>
 				</div>
 			</div>
 		</aside><!-- /Banner -->
-
+ 
 	<div class="container">
 		<div class="row">
 			<div class="contenedor">

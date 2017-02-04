@@ -992,7 +992,7 @@ object {
 	left: 5%;
 	padding: 1em;	
 	position: relative;
-	top:70%;
+	top:60%;
 	width: 80%;
 }
 
@@ -1001,10 +1001,10 @@ object {
 	font-size: 1em;
 	font-weight: 200;
 	left: 3%;
-	padding: 3em 1em;	
+	padding: 2em 0.5em;	
 	position: relative;
 	text-align: center;
-	top:20%;
+	top:10%;
 	width: 94%;
 }
 
@@ -1029,8 +1029,11 @@ object {
 .banner{
 	background-color: #232323;
 	color:#fff;
-	padding: 5em 0;
-	text-align: center;
+	padding: 3em 0;
+}
+
+.banner h3{
+	font-size:3em;
 }
 
 
