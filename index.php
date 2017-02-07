@@ -13,31 +13,13 @@
  */
 
 get_header(); ?>
-<div class="section menu">
-		<div class="container">
-			<div class="row">
-				<!--Nav-->
-				<div class="col-md-9">
-					<?php get_template_part('template-parts/nav','principal'); ?>
-				</div>
-				<!-- /Nav -->
-				<!--Social-->
-				<div class="col-md-3">
-					<div class="menu__social">
-						<?php get_template_part('template-parts/nav','social') ?>
-					</div>
-				</div>
-				<!--/Social-->
-		</div>
-	</div><!-- /Container -->
-</div>
-<!--/Menu-->
+
 
 <!--Principal-->
 <section class="contenedor principal">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-offset-1 col-md-10">
+			<div class="col-md-offset-1 col-md-10 col-xs-10 col-xs-offset-1">
 				<div class="posts">
 					<?php 
 					$args = array('post_type' => 'post', 'posts_per_page' => 3);
@@ -108,7 +90,7 @@ get_header(); ?>
 
 					if ( $loop2->have_posts() ) : while ( $loop2->have_posts() ) : $loop2->the_post(); ?>
 					<!-- post -->
-						<div class="col-md-4">
+						<div class="col-md-4 col-xs-6">
 							<div class="posts__item--secundarios">
 								<a href="<?php the_permalink(); ?>">
 									<?php 
@@ -130,6 +112,8 @@ get_header(); ?>
 					<?php else: ?>
 					<!-- no posts found -->
 					<?php endif; ?>
+
+					
 			</div>		
 		</div>
 	</div>

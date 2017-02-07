@@ -8,28 +8,38 @@
  */
 
 get_header(); ?>
+<!-- Single -->
+<section class="contenedor single">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<?php while ( have_posts() ) : the_post(); ?>
+				<!-- post -->
+					<h3><?php the_title(); ?></h3>
+					<div class="destacada">
+						<?php the_post_thumbnail('imagen-post'); ?>
+					</div>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+					<div class="col-md-10 col-md-offset-1">
+						<p><?php the_content(); ?></p>
+					</div>
+				<?php endwhile; ?>
+				<!-- post navigation -->				
+			</div>
+		</div>
+	</div>
+</section><!-- /Single -->
 
-		<?php
-		while ( have_posts() ) : the_post();
+<div class="section banner">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<?php get_template_part('template-parts/suscribirse'); ?>
+			</div>			
+		</div>
+	</div>
+</div>
 
-			get_template_part( 'template-parts/content', get_post_format() );
-
-			the_post_navigation();
-
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
-
-		endwhile; // End of the loop.
-		?>
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
 
 <?php
-get_sidebar();
 get_footer();

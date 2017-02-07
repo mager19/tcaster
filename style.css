@@ -946,7 +946,7 @@ object {
 .navbar-nav{
 	font-size: 1.1em;
     letter-spacing: 1px;
-   }
+}
 
 .navbar-nav a{
 	color:#fff;	
@@ -957,8 +957,8 @@ object {
 }
 
 .nav>li>a:focus, .nav>li>a:hover {
-    text-decoration: none;
     background-color: #fff!important;
+    text-decoration: none;
 }
 
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
@@ -968,7 +968,7 @@ object {
 }
 
 .navbar-header .icon-bar {
-    background-color: #888;
+    background-color: #fff;
 }
 
 .posts__item, .posts__item--secundarios{
@@ -1036,6 +1036,24 @@ object {
 	font-size:3em;
 }
 
+.banner h4{
+	font-size: 4em;
+	margin-top: 0.3em;
+}
+
+.banner span{
+	font-size: 2em;
+}
+
+.banner ul{
+	margin-top: 1em;
+}
+
+.banner ul li{
+	display: inline-block;
+	list-style: none;
+	margin-right: 1em;
+}
 
 .footer{
 	background-color:#232323;
@@ -1046,4 +1064,72 @@ object {
 
 .footer a{
 	color:#fff;
+}
+
+/* Single*/
+
+.single h3{
+	font-size: 3em;
+	text-align: center;
+}
+
+.destacada {
+	margin-top: 4em;
+}
+
+.single p{
+	font-size: 1.3em;
+	margin: 2em 0;
+}
+
+
+@media screen and (max-width:768px) {
+
+	.menu{
+		text-align: center;
+	}
+
+	.banner{
+		text-align: center;
+	}
+	.posts__item__contenido p {
+    	font-size: 1.1em;
+    }
+
+    .banner h4 {
+    	font-size: 2.5em;
+    }
+
+    .posts__item__titulo--secundarios h3 {
+	    font-size: 1em;
+	    height: 8em;
+	    padding: 2em 0.5em;
+	    top: 4%;
+	    width: 94%;
+	}
+	
+
+
+}
+
+
+@media screen and (max-width:480px) {
+	.posts__item__titulo h3 {
+	    background-color: rgba(255,255,255,0.8);
+	    font-size: 1.3em;
+	    font-weight: bold;
+	    left: 5%;
+	    padding: 2.5em 1em;
+	    position: relative;
+	    top: 20%;
+	    width: 90%;
+	}
+
+	.posts__item__titulo--secundarios h3 {
+	    font-size: 1em;
+	    padding: 1.5em 0.5em;
+	    top: 8%;
+	    width: 94%;
+	}
+	
 }

@@ -33,3 +33,23 @@
 			</div>
 		</div>
 	</header>
+
+	<section class="menu">
+		<div class="container">
+			<div class="row">
+				<!--Nav-->
+				<div class="col-md-9 col-xs-12">
+					<?php get_template_part('template-parts/nav','principal'); ?>
+				</div>
+				<!-- /Nav -->
+				<!--Social-->
+				<div class="col-md-3 col-xs-12">
+					<div class="menu__social">
+						<?php get_template_part('template-parts/nav','social') ?>
+					</div>
+				</div>
+				<!--/Social-->
+		</div>
+	</div><!-- /Container -->
+</section>
+<!--/Menu-->
