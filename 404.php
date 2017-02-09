@@ -9,56 +9,54 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+<section class="contenedor page">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="cuatrocerocuatro">
+					<h1>404</h1>
+					<h3>Lo sentimos .... Esta página no fue encontrada.</h3>
+					<p>Pero a continuación te presentamos las entradas recientes, quiza es una de las que buscas:</p>
+					<?php 
+					$args = array('posts_per_page' => 6);
+					$loop = new WP_Query($args);
 
-			<section class="error-404 not-found">
-				<header class="page-header">
-					<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'tcaster' ); ?></h1>
-				</header><!-- .page-header -->
+					if ( $loop->have_posts() ) : while ( $loop->have_posts() ) : $loop->the_post(); ?>
+					<!-- post -->
+						<div class="col-md-4 col-xs-12">
+							<div class="posts__item--secundarios">
+								<a href="<?php the_permalink(); ?>">
+									<?php 
+									if( has_post_thumbnail()):?>
+										<div class="posts__item__titulo--secundarios" style="background-image: url(<?php the_post_thumbnail_url('imagen-post-secundarios'); ?>);">
+											<h3><?php the_title(); ?></h3>
+										</div>								
+									<?php else:?>
+										<div class="posts__item__titulo--secundarios" style="background-color:#f5f5f5;border:1px dashed #30A9DE;">
+											<h3><?php the_title(); ?></h3>								
+										</div>
+									<?php
+									endif;?>
+								</a>	
+							</div>
+						</div>	
+					<?php endwhile; ?>
+					<!-- post navigation -->
+					<?php else: ?>
+					<!-- no posts found -->
+					<?php endif; ?>
 
-				<div class="page-content">
-					<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'tcaster' ); ?></p>
+					<?php wp_reset_postdata(); ?>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
 
-					<?php
-						get_search_form();
 
-						the_widget( 'WP_Widget_Recent_Posts' );
 
-						// Only show the widget if site has multiple categories.
-						if ( tcaster_categorized_blog() ) :
-					?>
 
-					<div class="widget widget_categories">
-						<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'tcaster' ); ?></h2>
-						<ul>
-						<?php
-							wp_list_categories( array(
-								'orderby'    => 'count',
-								'order'      => 'DESC',
-								'show_count' => 1,
-								'title_li'   => '',
-								'number'     => 10,
-							) );
-						?>
-						</ul>
-					</div><!-- .widget -->
-
-					<?php
-						endif;
-
-						/* translators: %1$s: smiley */
-						$archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'tcaster' ), convert_smilies( ':)' ) ) . '</p>';
-						the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$archive_content" );
-
-						the_widget( 'WP_Widget_Tag_Cloud' );
-					?>
-
-				</div><!-- .page-content -->
-			</section><!-- .error-404 -->
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
+	
 
 <?php
 get_footer();

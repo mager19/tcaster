@@ -14,7 +14,6 @@
 
 get_header(); ?>
 
-
 <!--Principal-->
 <section class="contenedor principal">
 	<div class="container">
@@ -111,9 +110,8 @@ get_header(); ?>
 					<!-- post navigation -->
 					<?php else: ?>
 					<!-- no posts found -->
-					<?php endif; ?>
-
-					
+					<?php endif; ?>			
+					<?php wp_reset_postdata(); ?>		
 			</div>		
 		</div>
 	</div>

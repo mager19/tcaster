@@ -8,7 +8,6 @@
  */
 
 ?>
-
 <ul>
 	<li><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/twitter.png" alt="twitter"></a></li>
 	<li><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/facebook.png" alt=""></a></li>

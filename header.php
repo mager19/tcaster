@@ -19,13 +19,30 @@
 <?php wp_head(); ?>
 </head>
 
+<?php 
+	if ( get_theme_mod( 'tcaster_sociales' ) ) : 
+ 			$mod = get_theme_mod( 'tcaster_sociales');?>
+ 		<a href="<?php echo esc_url("twitter.com/".$mod); ?>">Twitter</a>
+ 	<?php else: echo ('nada');
+	endif;
+?>
+
 <body <?php body_class(); ?>>
-	<header class="header">
+	<header class="header" style="background-image: url(<?php echo( get_header_image() ); ?>); background-size: cover;">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-4 col-md-offset-4">
 					<div class="header__logo">
-						<img src="https://placeholdit.imgix.net/~text?txtsize=6&txt=50%C3%9750&w=100&h=100">
+						<!-- Logo personalizado -->
+						<?php 
+							$custom_logo_id = get_theme_mod( 'custom_logo' );
+							$logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+							if ( has_custom_logo() ) {
+								echo '<img src="'. esc_url( $logo[0] ) .'">';
+							} else {
+								echo '<img src="https://imgholder.ru/100x100/cccccc/000000.jpg&text=Cambia tu logo">';
+							} 
+						?>
 						<h1><?php bloginfo('name'); ?></h1>
 						<h2><?php bloginfo('description') ?></h2>
 					</div>

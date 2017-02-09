@@ -16,10 +16,8 @@ get_header(); ?>
 				<?php while ( have_posts() ) : the_post(); ?>
 				<!-- post -->
 					<h3><?php the_title(); ?></h3>
-					<div class="destacada">
-						<?php the_post_thumbnail('imagen-post'); ?>
-					</div>
-
+					<h4><?php the_date( 'd M Y', '<span> ',  '</span> /' ); ?> <?php the_category( ', ' ); ?> </h4>
+					<?php the_post_thumbnail($size = 'imagen-post') ?>					
 					<div class="col-md-10 col-md-offset-1">
 						<p><?php the_content(); ?></p>
 					</div>
@@ -30,16 +28,18 @@ get_header(); ?>
 	</div>
 </section><!-- /Single -->
 
-<div class="section banner">
+<section class="comentarios">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
-				<?php get_template_part('template-parts/suscribirse'); ?>
-			</div>			
+				<div id="comments">
+					<?php comments_template(); ?>
+				</div><!-- #comments-area -->
+			</div>
 		</div>
 	</div>
-</div>
-
+</section>
 
 <?php
-get_footer();
+get_template_part('template-parts/footer','single');
+		  

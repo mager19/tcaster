@@ -69,11 +69,21 @@ function tcaster_setup() {
 		'default-image' => '',
 	) ) );
 
+	// Adicionar el soporte al tema para el logo
+	add_theme_support( 'custom-logo', array(
+	'height'      => 100,
+	'width'       => 100,
+	'flex-height' => false,
+	'flex-width'  => false,
+	'header-text' => array( 'site-title', 'site-description' ),
+	) );
+
 	// Add theme support for selective refresh for widgets.
 	add_theme_support( 'customize-selective-refresh-widgets' );
 }
 endif;
 add_action( 'after_setup_theme', 'tcaster_setup' );
+
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -154,5 +164,30 @@ require get_template_directory() . '/inc/jetpack.php';
 
 
 // Register custom navigation walker
-    require_once('wp_bootstrap_navwalker.php');
-	
+require_once('wp_bootstrap_navwalker.php');
+
+
+function enlaces_redes_sociales($wp_customize){
+
+	$wp_customize->add_section('enlaces_redes_sociales', array(
+        'title'    => __('Enlaces Redes Sociales', 'tcaster'),
+        'description' => 'Diferentes enlaces a redes sociales',
+        'priority' => 30,
+    ));
+
+ 	$wp_customize->add_setting('tcaster_sociales', array(
+ 		'default' => '',
+ 	));
+
+ 	$wp_customize->add_control('tcaster_sociales', array(
+ 		'label'         => __( 'Twitter Link', 'tcaster' ),
+		'section'       => 'enlaces_redes_sociales',
+		'type'          => 'text',
+		'priority'      => 5,
+ 	));
+
+}
+
+add_action( 'customize_register', 'enlaces_redes_sociales' );
+
+
