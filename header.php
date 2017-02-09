@@ -19,14 +19,6 @@
 <?php wp_head(); ?>
 </head>
 
-<?php 
-	if ( get_theme_mod( 'tcaster_sociales' ) ) : 
- 			$mod = get_theme_mod( 'tcaster_sociales');?>
- 		<a href="<?php echo esc_url("twitter.com/".$mod); ?>">Twitter</a>
- 	<?php else: echo ('nada');
-	endif;
-?>
-
 <body <?php body_class(); ?>>
 	<header class="header" style="background-image: url(<?php echo( get_header_image() ); ?>); background-size: cover;">
 		<div class="container">

@@ -175,16 +175,58 @@ function enlaces_redes_sociales($wp_customize){
         'priority' => 30,
     ));
 
- 	$wp_customize->add_setting('tcaster_sociales', array(
- 		'default' => '',
- 	));
+ 	// WP THEME CUSTOMIZER: COLORS
+	$redes = array();
+	$redes[] = array(
+	    'slug'=>'twitter', 
+	    'default' => '',
+	    'description' => 'No incluyas el http://twitter.com/ ',
+	    'label' => __('Usuario de Twitter'),
+	    'type' => 'text',
+	   );
+	$redes[] = array(
+	    'slug'=>'facebook', 
+	    'default' => '',
+	    'description' => 'No incluyas el http://facebook.com/ ',
+	    'label' => __('Enlace de Facebook')
+	);
+	$redes[] = array(
+	    'slug'=>'instragram', 
+	    'default' => '',
+	    'description' => 'No incluyas el http://instagram.com/ ',
+	    'label' => __('Enlace de Instagram')
+	);
+	$redes[] = array(
+	    'slug'=>'rss', 
+	    'default' => '',
+	    'description' => 'Incluye la dirección completa de tu feed',
+	    'label' => __('Enlace de Feed')
+	);
 
- 	$wp_customize->add_control('tcaster_sociales', array(
- 		'label'         => __( 'Twitter Link', 'tcaster' ),
-		'section'       => 'enlaces_redes_sociales',
-		'type'          => 'text',
-		'priority'      => 5,
- 	));
+foreach( $redes as $red ) {
+    // SETTINGS
+	
+    $wp_customize->add_setting(
+        $red['slug'], array(
+            'default' => $red['default'],
+            // 'type' => 'text', 
+            'capability' => 
+            'edit_theme_options'
+        )
+    );
+
+    // CONTROLS
+    $wp_customize->add_control(
+            $red['slug'], 
+            array('label' => $red['label'], 
+            'section' => 'enlaces_redes_sociales',
+            'settings' => $red['slug'],
+            'description' => $red['description']
+            
+            )
+        
+    );
+}
 
 }
 
