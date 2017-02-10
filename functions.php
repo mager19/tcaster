@@ -167,69 +167,6 @@ require get_template_directory() . '/inc/jetpack.php';
 require_once('wp_bootstrap_navwalker.php');
 
 
-function enlaces_redes_sociales($wp_customize){
 
-	$wp_customize->add_section('enlaces_redes_sociales', array(
-        'title'    => __('Enlaces Redes Sociales', 'tcaster'),
-        'description' => 'Diferentes enlaces a redes sociales',
-        'priority' => 30,
-    ));
-
- 	// WP THEME CUSTOMIZER: COLORS
-	$redes = array();
-	$redes[] = array(
-	    'slug'=>'twitter', 
-	    'default' => '',
-	    'description' => 'No incluyas el http://twitter.com/ ',
-	    'label' => ('Usuario de Twitter'),
-	    'type' => 'text',
-	   );
-	$redes[] = array(
-	    'slug'=>'facebook', 
-	    'default' => '',
-	    'description' => 'No incluyas el http://facebook.com/ ',
-	    'label' => ('Enlace de Facebook')
-	);
-	$redes[] = array(
-	    'slug'=>'instragram', 
-	    'default' => '',
-	    'description' => 'No incluyas el http://instagram.com/ ',
-	    'label' => ('Enlace de Instagram')
-	);
-	$redes[] = array(
-	    'slug'=>'rss', 
-	    'default' => '',
-	    'description' => 'Incluye la direcci&oacute;n completa de tu feed',
-	    'label' => ('Enlace de Feed')
-	);
-
-foreach( $redes as $red ) {
-    // SETTINGS
-	
-    $wp_customize->add_setting(
-        $red['slug'], array(
-            'default' => $red['default'],
-            'capability' => 
-            'edit_theme_options',
-            'sanitize_callback' => 'cs_sanitize_clean',
-        )
-    );
-
-    // CONTROLS
-    $wp_customize->add_control(
-            $red['slug'], 
-            array('label' => $red['label'], 
-            'section' => 'enlaces_redes_sociales',
-            'settings' => $red['slug'],
-            'description' => $red['description']
-            
-            )
-        
-    );
-}
-
-}
-
-add_action( 'customize_register', 'enlaces_redes_sociales' );
 
 

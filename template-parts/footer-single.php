@@ -19,9 +19,17 @@
 					</div>
 					<div class="col-md-10">
 						<ul>
-							<li><a href="#">Rss Feed</a></li>
-							<li><a href="#">Itunes </a></li>
-							<li><a href="#">Newsletter</a></li>
+							<?php
+							if ( get_theme_mod( 'rss' ) ):
+								$rss = get_theme_mod( 'rss' );?>
+								<li><a href="<?php echo esc_url( $rss ); ?>" target=_blank>Rss Feed</a></li>	
+							<?php endif ?>
+							<?php
+							if ( get_theme_mod( 'newsletter' ) ):
+								$newsletter = get_theme_mod( 'newsletter' );?>
+								<li><a href="<?php echo esc_url( $newsletter ); ?>" target=_blank>Newsletter</a></li>
+							<?php endif;	
+							?>
 						</ul>
 					</div>
 				</div>		

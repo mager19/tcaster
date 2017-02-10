@@ -17,7 +17,9 @@ get_header(); ?>
 				<!-- post -->
 					<h3><?php the_title(); ?></h3>
 					<h4><?php the_date( 'd M Y', '<span> ',  '</span> /' ); ?> <?php the_category( ', ' ); ?> </h4>
-					<?php the_post_thumbnail($size = 'imagen-post') ?>					
+					<div class="single__destacada">
+						<?php the_post_thumbnail('imagen-post'); ?>
+					</div>
 					<div class="col-md-10 col-md-offset-1">
 						<p><?php the_content(); ?></p>
 					</div>
