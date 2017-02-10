@@ -136,7 +136,6 @@ add_action( 'wp_enqueue_scripts', 'tcaster_scripts' );
 
 
 
-
 /**
  * Implement the Custom Header feature.
  */

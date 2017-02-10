@@ -14,6 +14,8 @@
 
 get_header(); ?>
 
+
+
 <!--Principal-->
 <section class="contenedor principal">
 	<div class="container">
