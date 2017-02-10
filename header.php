@@ -32,7 +32,7 @@
 							if ( has_custom_logo() ) {
 								echo '<img src="'. esc_url( $logo[0] ) .'">';
 							} else {
-								echo '<img src="https://imgholder.ru/100x100/cccccc/000000.jpg&text=Cambia tu logo">';
+								echo '';
 							} 
 						?>
 						<h1><?php bloginfo('name'); ?></h1>
@@ -42,7 +42,6 @@
 			</div>
 		</div>
 	</header>
-
 	<section class="menu">
 		<div class="container">
 			<div class="row">

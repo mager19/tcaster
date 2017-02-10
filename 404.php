@@ -15,8 +15,8 @@ get_header(); ?>
 			<div class="col-md-12">
 				<div class="cuatrocerocuatro">
 					<h1>404</h1>
-					<h3>Lo sentimos .... Esta página no fue encontrada.</h3>
-					<p>Pero a continuación te presentamos las entradas recientes, quiza es una de las que buscas:</p>
+					<h3>Lo sentimos .... Esta p&aacute;gina no fue encontrada.</h3>
+					<p>Pero a continuaci&oacute;n te presentamos las entradas recientes, quiza es una de las que buscas:</p>
 					<?php 
 					$args = array('posts_per_page' => 6);
 					$loop = new WP_Query($args);

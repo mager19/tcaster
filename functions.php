@@ -181,26 +181,26 @@ function enlaces_redes_sociales($wp_customize){
 	    'slug'=>'twitter', 
 	    'default' => '',
 	    'description' => 'No incluyas el http://twitter.com/ ',
-	    'label' => __('Usuario de Twitter'),
+	    'label' => ('Usuario de Twitter'),
 	    'type' => 'text',
 	   );
 	$redes[] = array(
 	    'slug'=>'facebook', 
 	    'default' => '',
 	    'description' => 'No incluyas el http://facebook.com/ ',
-	    'label' => __('Enlace de Facebook')
+	    'label' => ('Enlace de Facebook')
 	);
 	$redes[] = array(
 	    'slug'=>'instragram', 
 	    'default' => '',
 	    'description' => 'No incluyas el http://instagram.com/ ',
-	    'label' => __('Enlace de Instagram')
+	    'label' => ('Enlace de Instagram')
 	);
 	$redes[] = array(
 	    'slug'=>'rss', 
 	    'default' => '',
-	    'description' => 'Incluye la dirección completa de tu feed',
-	    'label' => __('Enlace de Feed')
+	    'description' => 'Incluye la direcci&oacute;n completa de tu feed',
+	    'label' => ('Enlace de Feed')
 	);
 
 foreach( $redes as $red ) {
@@ -209,9 +209,9 @@ foreach( $redes as $red ) {
     $wp_customize->add_setting(
         $red['slug'], array(
             'default' => $red['default'],
-            // 'type' => 'text', 
             'capability' => 
-            'edit_theme_options'
+            'edit_theme_options',
+            'sanitize_callback' => 'cs_sanitize_clean',
         )
     );
 
