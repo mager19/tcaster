@@ -20,7 +20,7 @@
 </head>
 
 <body <?php body_class(); ?>>
-	<header class="header" style="background-image: url(<?php echo( get_header_image() ); ?>); background-size: cover;">
+	<header class="contenedor header" style="background-image: url(<?php echo( get_header_image() ); ?>); background-size: cover;">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-4 col-md-offset-4">
@@ -31,11 +31,11 @@
 							$logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
 							if ( has_custom_logo() ) {
 								echo '<img src="'. esc_url( $logo[0] ) .'">';
-							} else {
-								echo '';
+							} else {?>
+								<h1><?php bloginfo('name'); ?></h1>
+							<?php 
 							} 
 						?>
-						<h1><?php bloginfo('name'); ?></h1>
 						<h2><?php bloginfo('description') ?></h2>
 					</div>
 				</div>

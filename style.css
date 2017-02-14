@@ -793,7 +793,7 @@ object {
 
 .header{
 	background-color: lightgray;
-	padding:3em 0;
+	padding:5em 0;
 }
 
 .header__logo{
@@ -804,12 +804,13 @@ object {
 	font-size: 2.5em;
 	font-weight: bold;
 	letter-spacing: 1px;
+	padding-top: 1em;
 	margin-top: 10px;
 }
 
 .header__logo h2{
 	font-size: 1.2em;
-	margin-top: 1px;
+	margin-top: 1em;
 }
 
 .menu{
